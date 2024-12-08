@@ -3,7 +3,7 @@ package br.com.felipemaia.todolist.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;  // Correção aqui: importando de jakarta.persistence.Id
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
@@ -13,9 +13,8 @@ public class Todo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String nome;
-    private String descricao;  // Corrigido para "descricao"
+    private String descricao;
     private boolean realizado;
     private int prioridade;
 

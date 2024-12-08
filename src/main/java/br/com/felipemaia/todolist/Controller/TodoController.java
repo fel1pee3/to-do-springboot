@@ -3,7 +3,6 @@ package br.com.felipemaia.todolist.Controller;
 import br.com.felipemaia.todolist.Service.TodoService;
 import br.com.felipemaia.todolist.entity.Todo;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -18,7 +17,7 @@ public class TodoController {
 
     @PostMapping
     List<Todo> create(@RequestBody Todo todo){
-        return todoService.crete(todo);
+        return todoService.create(todo);
     }
 
     @GetMapping
@@ -28,12 +27,12 @@ public class TodoController {
 
     @PutMapping
     List<Todo> update(@RequestBody Todo todo){
-        return  todoService.updade(todo);
+        return todoService.update(todo);
     }
 
-    @DeleteMapping("{id")
+    @DeleteMapping("{id}")
     List<Todo> delete(@PathVariable("id") Long id){
-        return  todoService.delete(id);
+        return todoService.delete(id);
     }
 
 }
